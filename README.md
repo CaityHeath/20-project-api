@@ -1,46 +1,17 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-## Project Name
-
-### Author: Student/Group Name
+## Ha-API an authenticated API
+### Author: Caity Heath and Jacob Anderson
 
 ### Links and Resources
-* [repo](http://xyz.com)
-* [travis](http://xyz.com)
-* [back-end](http://xyz.com) (when applicable)
-* [front-end](http://xyz.com) (when applicable)
+* [repo](https://github.com/CaityHeath/20-project-api)
+* [![Build Status](https://www.travis-ci.com/CaityHeath/20-project-api.svg?branch=master)](https://www.travis-ci.com/CaityHeath/20-project-api)
+* [back-end](https://ha-api.herokuapp.com/) 
 
-#### Documentation
-* [swagger](http://xyz.com) (API assignments only)
-* [jsdoc](http://xyz.com) (All assignments)
-
-### Modules
-#### `modulename.js`
-##### Exported Values and Methods
-
-###### `foo(thing) -> string`
-Usage Notes or examples
-
-###### `bar(array) -> array`
-Usage Notes or examples
-
-### Setup
-#### `.env` requirements
-* `PORT` - Port Number
-* `MONGODB_URI` - URL to the running mongo instance/db
-
-#### Running the app
-* `npm start`
-* Endpoint: `/foo/bar/`
-  * Returns a JSON object with abc in it.
-* Endpoint: `/bing/zing/`
-  * Returns a JSON object with xyz in it.
   
 #### Tests
-* How do you run tests?
-* What assertions were made?
-* What assertions need to be / should be made?
+* `npm test` runs the the test
+* All modules were tested. The authentication tests check if a user can make an account and signin. The authoization tests checks a user's capabilities. The players and team's tests check if the data can be fetched from the api. 
+* All modules function as they should!
 
-#### UML
-Link to an image of the UML for your application and response to events

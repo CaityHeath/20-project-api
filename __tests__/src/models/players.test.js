@@ -1,6 +1,5 @@
 'use strict';
 
-const rootDir = process.cwd();
 const players = require(`../../../src/api/players-model`);
 
 const supergoose = require('../../supergoose.js');
