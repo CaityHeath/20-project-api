@@ -10,6 +10,7 @@ const supergoose = require('../../supergoose.js');
 
 const mockRequest = supergoose.server(server);
 
+
 let users = {
   admin: {username: 'admin', password: 'password', role: 'admin'},
   editor: {username: 'editor', password: 'password', role: 'editor'},
@@ -27,7 +28,7 @@ beforeAll(async (done) => {
   const admin = await new Roles(roles.admin).save();
   const editor = await new Roles(roles.editor).save();
   const user = await new Roles(roles.user).save();
-  done()
+  done();
 });
 
 

@@ -10,12 +10,12 @@ module.exports = (capability) => {
       let [authType, authString] = req.headers.authorization.split(/\s+/);
 
       switch (authType.toLowerCase()) {
-        case 'basic':
-          return _authBasic(authString);
-        case 'bearer':
-          return _authBearer(authString);
-        default:
-          return _authError();
+      case 'basic':
+        return _authBasic(authString);
+      case 'bearer':
+        return _authBearer(authString);
+      default:
+        return _authError();
       }
     } catch (e) {
       _authError();
@@ -46,7 +46,7 @@ module.exports = (capability) => {
         req.token = user.generateToken();
         next();
       }
-      else {
+      else {                
         _authError();
       }
     }
