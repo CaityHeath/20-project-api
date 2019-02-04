@@ -22,11 +22,12 @@ users.virtual('acl', {
   ref: 'roles',
   localField: 'role',
   foreignField: 'role',
-  justOne:true,
+  justOne:false,
 });
 
 users.pre('findOne', function() {
   try {
+    console.log('inside of pre', this.acl);
     this.populate('acl');
   }
   catch(e) {
@@ -37,6 +38,7 @@ users.pre('findOne', function() {
 users.pre('save', function(next) {
   bcrypt.hash(this.password, 10)
     .then(hashedPassword => {
+      //console.log('hashed password', hashedPassword);
       this.password = hashedPassword;
       next();
     })

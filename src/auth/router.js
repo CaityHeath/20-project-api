@@ -14,7 +14,7 @@ authRouter.post('/signup', (req, res, next) => {
     .then( (user) => {
       User.findOne({_id: user._id})
         .then(user => {
-          console.log('user: ',user);
+          //console.log('user: ',user);
           req.token = user.generateToken();
           req.user = user;
           res.set('token', req.token);
